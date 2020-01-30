@@ -41,7 +41,7 @@ h3 {
 
 input {
     border-radius: 3px;
-    height: 15px;
+    height: 30px;
 }
 
 .button {
@@ -76,4 +76,76 @@ input:focus::placeholder {
     color: transparent;
   }
 
+.Schedule-h1 {
+    text-align: center;
+}
 
+.buttonSchedule {
+    margin-left: 400px;
+    width: 80px;
+    height: 30px;
+    margin: 20px;
+    border-radius: 5px;
+    color: rgb(98, 133, 98);
+    border: none;
+    font-weight: bold;
+}
+
+.buttonSchedule:hover {
+    background-color: darkolivegreen;
+    color: rgb(165, 177, 165);
+    border: 2px solid darkolivegreen;
+    border-color: rgb(165, 177, 165);
+}
+
+table {
+    color: white;
+    background-color: rgb(184, 182, 182);
+    margin: auto;
+    /* margin: 25 px 0; */
+    padding: 2px;
+    min-width: 600px;
+    text-align: center;
+    /* line-height: 18px; */
+    grid-row-start: span;
+    /* column-width: 400px; */
+    /* border-width: 2px;
+    border-color: indigo; */
+    border-radius: 5px;
+}
+
+table thead tr {
+    background-color: rgb(118, 117, 143);
+    font-weight: bolder;
+    line-height: 28px;
+    position: sticky;
+    top: 0;
+}
+
+table th,
+table td {
+    padding: 12px, 15px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid rgb(15, 15, 29);
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+    color: rgb(94, 90, 90);
+}
+
+table tbody tr:nth-of-type(odd) {
+    color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    line-height: 28px;
+    background-color: rgb(118, 117, 143);
+}
+
+.sumRow {
+    font-weight: bolder;
+
+}

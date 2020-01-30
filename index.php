@@ -4,7 +4,7 @@
     session_start();
     include ('Formulas.php');
 
-    print_r ($_SESSION);
+    // print_r ($_SESSION);
     echo "<br>";
     // print_r ($loanAmount);// така не става, трябва през сесия да се докара тук и евентуално и да се принтира
 
