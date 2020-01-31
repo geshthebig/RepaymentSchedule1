@@ -20,9 +20,12 @@
         // print_r ($interestRate);   
     
         $_SESSION['pmt'] = calcPayment($loanAmount, $period, $interestRate);
+        
+
         $_SESSION['loanAmount'] = $loanAmount;
         $_SESSION['period'] = $period;
         $_SESSION['interestRate'] = $interestRate;
+
         $_SESSION['interest'] = $interest;
         $_SESSION['principal'] = $principal;
         $_SESSION['remainPrincipal'] = $remainPrincipal;

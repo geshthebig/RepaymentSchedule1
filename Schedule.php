@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
+    
+
     <body>
         <h1 class="Schedule-h1">Repayment schedule</h1>
         <a class="buttonSchedule" href="index.php">GO BACK</a>
@@ -63,25 +65,30 @@
             ?>
                     <tr> 
                         <td><?php echo $i; ?> </td> 
-                        <td><?php echo $prin; ?> </td>
-                        <td><?php echo $int; ?> </td>
-                        <td><?php echo $pmt; ?> </td>
-                        <td><?php echo $remPrin; ?> </td>
+                        <td><?php echo number_format($prin,2,"."," "); ?> </td>
+                        <td><?php echo number_format($int,2,"."," "); ?> </td>
+                        <td><?php echo number_format($pmt,2,"."," "); ?> </td>
+                        <td><?php echo number_format($remPrin,2,"."," "); ?> </td>
                     </tr>
                     <?php
-                        $int = $remPrin * ($rate/12); $int = round($int, 2);
+                    
+                        $prinSum += $prin;
+                        $int = $remPrin * ($rate/12); 
                         $prin = $pmt - $int;
                         $remPrin = $remPrin - $prin;
                         $intSum += $int; 
                         $pmtSum += $pmt;
-                        $prinSum += $prin;
+
+                        // ---- ПРОВЕРКА ------
+                        // var_dump($prinSum);
+                        // die();
                 }
                     ?>
                     <tr class="sumRow"> 
                         <td><?php echo "SUM:"; ?> </td> 
-                        <td><?php echo $prinSum; ?> </td>
-                        <td><?php echo $intSum; ?> </td>
-                        <td><?php echo $pmtSum; ?> </td>
+                        <td><?php echo number_format($prinSum,2,"."," "); ?> </td>
+                        <td><?php echo number_format($intSum,2,"."," "); ?> </td>
+                        <td><?php echo number_format($pmtSum,2,"."," "); ?> </td>
                         <td><?php echo ""; ?> </td>
                     </tr>
                 <?php

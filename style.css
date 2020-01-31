@@ -13,6 +13,7 @@ body {
 h1 {
     display: block;
     margin-bottom: 500 px;
+    color: whitesmoke;
 }
 
 h3 {
@@ -34,7 +35,8 @@ h3 {
     margin: auto;
     margin-top: 20px;
     text-align: center;
-    background-color: rgb(136, 161, 88);
+    color: rgb(71, 105, 155);
+    background-color: rgb(204, 206, 200);
     border-radius: 15px;
     list-style: none;
 }
@@ -42,6 +44,16 @@ h3 {
 input {
     border-radius: 3px;
     height: 30px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.schedule {
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(59, 116, 48);
 }
 
 .button {
@@ -76,8 +88,23 @@ input:focus::placeholder {
     color: transparent;
   }
 
+h4 {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: unset;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.addFinInfo {
+    font-style: normal;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .Schedule-h1 {
     text-align: center;
+    color:whitesmoke;
+
 }
 
 .buttonSchedule {
@@ -86,14 +113,14 @@ input:focus::placeholder {
     height: 30px;
     margin: 20px;
     border-radius: 5px;
-    color: rgb(98, 133, 98);
+    color: rgb(194, 212, 194);
     border: none;
     font-weight: bold;
 }
 
 .buttonSchedule:hover {
     background-color: darkolivegreen;
-    color: rgb(165, 177, 165);
+    color: rgb(131, 148, 131);
     border: 2px solid darkolivegreen;
     border-color: rgb(165, 177, 165);
 }
@@ -125,6 +152,12 @@ table thead tr {
 table th,
 table td {
     padding: 12px, 15px;
+    width: 100px;
+}
+
+table td:nth-of-type(1),
+table th:nth-of-type(1) {
+    width: 50px;
 }
 
 table tbody tr {

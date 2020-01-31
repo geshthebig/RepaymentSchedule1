@@ -10,7 +10,7 @@
         $value1 = ($interestRate/12) * pow((1 + $interestRate/12), $period);
         $value2 = pow((1 + $interestRate/12), $period) - 1;
         $pmt    = $loanAmount * ($value1 / $value2);
-        
+
         return $pmt;
     }
     

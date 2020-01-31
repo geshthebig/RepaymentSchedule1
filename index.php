@@ -51,10 +51,10 @@
         
         <div class="resume">
             <h3>Given the chosen parameters: </h3>
-            <li>Loan amount:  <?php echo $_SESSION['loanAmount'];?> </li>
-            <li>Period (months):  <?php echo $_SESSION['period'];?> </li>
-            <li>Interest rate:  <?php echo $_SESSION['interestRate'];?> </li>
-            <h3>Your monthly instalment is: <?php echo $_SESSION['pmt'];?> </h3>
+            <li>Loan amount: <span> <?php echo number_format($_SESSION['loanAmount'],2,"."," ");?> </span> </li>
+            <li>Period (months): <span> <?php echo $_SESSION['period'];?> </span></li>
+            <li>Interest rate: <span> <?php echo sprintf("%.2f%%", $_SESSION['interestRate'] * 100);?> </span></li>
+            <h3>Your monthly instalment is: <?php echo number_format($_SESSION['pmt'],2,"."," ");?> </h3>
         
             <form action="Schedule.php" method="post" class="schedule"> 
                 <div>    
@@ -72,5 +72,14 @@
         </div>
     </body>
 
+    <footer>
+        <hr>
+        <h4>see additional financial information here:</h4>
+        <ul class=addFinInfo>
+            <li> <a href="https://www.moitepari.bg/">https://www.moitepari.bg/</a> </li>
+            <li> <a href="http://www.bnb.bg/PressOffice/POUsefullinks/index.htm">http://www.bnb.bg/PressOffice/POUsefullinks/index.htm</a> </li>
+        </ul>
+
+    </footer>
 </html>
 
