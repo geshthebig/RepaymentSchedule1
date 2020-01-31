@@ -71,17 +71,21 @@
                         <td><?php echo number_format($remPrin,2,"."," "); ?> </td>
                     </tr>
                     <?php
-                    
-                        $prinSum += $prin;
+                                                        
+                        // ---- ПРОВЕРКА ------
+                        // var_dump($prinSum);
+                        
+                        $prinSum += $prin;    
                         $int = $remPrin * ($rate/12); 
                         $prin = $pmt - $int;
                         $remPrin = $remPrin - $prin;
                         $intSum += $int; 
                         $pmtSum += $pmt;
-
+                        
                         // ---- ПРОВЕРКА ------
                         // var_dump($prinSum);
                         // die();
+                    
                 }
                     ?>
                     <tr class="sumRow"> 
@@ -92,11 +96,14 @@
                         <td><?php echo ""; ?> </td>
                     </tr>
                 <?php
+                        $_SESSION ['intSum'] = $intSum;
+                        $_SESSION ['pmtSum'] = $pmtSum;
+                                    
+                       
                     // print_r ("Interest SUM" . $intSum); echo "<br>";
                     // print_r ("Instalments SUM" . $pmtSum);echo "<br>";
                     // print_r ("Principa SUM" . $prinSum);echo "<br>";
                     die();
-                    // echo "Instalment No: " . $i . "---" . $prin . "---" . $int . "---" . $pmt . "---" . $remPrin; echo "<br>";
                 ?>
         </table>
     </body>

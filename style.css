@@ -46,13 +46,42 @@ input {
     height: 30px;
 }
 
+.parameters-input {
+    color:white;
+    /* color: rgb(222, 237, 245); */
+    background-color:  darkolivegreen;
+}
+
 span {
     font-weight: bold;
 }
 
+.summary {
+    display: block;
+    margin-top: 30px;
+    color: rgb(59, 116, 48);
+}
+
+.summary-text {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+.summary-number {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
 .schedule {
     font-style: italic;
+    font-size: 14px;
     font-weight: bold;
+    /* text-decoration: underline; */
+    /* font-weight: bold; */
     color: rgb(59, 116, 48);
 }
 

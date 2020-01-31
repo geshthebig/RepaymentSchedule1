@@ -33,19 +33,19 @@
             <form action="postParam.php" method="post" class="Form"> 
                 <div>    
                     <label>Loan amount</label>
-                    <input type="text" name="loanAmount" placeholder="Enter loan amount">
+                    <input class="parameters-input" type="text" name="loanAmount" placeholder="Enter loan amount">
                 </div> 
 
                 <div>
                     <label>Period (months)</label>
-                    <input type="text" name="period" placeholder="Enter months of repayment" >
+                    <input class="parameters-input" type="text" name="period" placeholder="Enter months of repayment" >
                 </div> 
                     
                 <div>
                     <label>Interest rate</label>
-                    <input type="text" name="interestRate" placeholder="Enter the rate">
+                    <input class="parameters-input" type="text" name="interestRate" placeholder="Enter the rate">
                 </div> 
-                <input type="submit" value="Check" class= "button">
+                <input type="submit" value="Check" class= "button" id="Check">
             </form>
         </div>
         
@@ -54,12 +54,17 @@
             <li>Loan amount: <span> <?php echo number_format($_SESSION['loanAmount'],2,"."," ");?> </span> </li>
             <li>Period (months): <span> <?php echo $_SESSION['period'];?> </span></li>
             <li>Interest rate: <span> <?php echo sprintf("%.2f%%", $_SESSION['interestRate'] * 100);?> </span></li>
-            <h3>Your monthly instalment is: <?php echo number_format($_SESSION['pmt'],2,"."," ");?> </h3>
-        
+            
+            <div class="summary">
+                <li><span class="summary-text">Your monthly instalment is:</span> <span class="summary-number"><?php echo number_format($_SESSION['pmt'],2,"."," ");?> </span></li>
+                <li><span class="summary-text">The Total interest is:</span> <span class="summary-number"><?php echo number_format($_SESSION ['intSum'],2,"."," ");?> </span></li>
+                <li><span class="summary-text">The Total paid amount is:</span> <span class="summary-number"><?php echo number_format($_SESSION ['pmtSum'],2,"."," ");?> </span></li>
+            </div>
+
             <form action="Schedule.php" method="post" class="schedule"> 
                 <div>    
-                    <label>See the Repayment schedule</label>
-                    <input type="submit" value="Schedule" class= "button">
+                    <label>see the Repayment schedule</label>
+                    <input type="submit" value="Schedule" class= "button" id="Schedule">
                 </div> 
             </form>
             

@@ -14,7 +14,7 @@
         return $pmt;
     }
     
-    function deleteSession() {
+    function deleteSession() { // не се използва в тази версия на програмата
         $result = session_destroy();
         return $result;
 
